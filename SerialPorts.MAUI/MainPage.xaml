@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerialPorts.MAUI.MainPage">
+
+   <Grid ColumnDefinitions="auto,*" Margin="5">
+
+      <VerticalStackLayout Grid.Column="0" Margin="5" BackgroundColor="WhiteSmoke" >
+
+         <Button Text="Refresh ports" Margin="10" Clicked="btnRefresh_Clicked" />
+
+      </VerticalStackLayout>
+
+      <Editor Grid.Column="1" x:Name="label"
+             Margin="5" BackgroundColor="WhiteSmoke"
+              />
+
+   </Grid>
+
+</ContentPage>
+

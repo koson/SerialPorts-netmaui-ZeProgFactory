@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPorts", "SerialPorts.csproj", "{81CB5AF8-E9FE-49A7-89B1-4C2A164DAA64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPorts.CMD", "SerialPorts.CMD\SerialPorts.CMD.csproj", "{81CB5AF8-E9FE-49A7-89B1-4C2A164DAA64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPorts.MAUI", "SerialPorts.MAUI\SerialPorts.MAUI.csproj", "{090A7186-5B79-413B-B342-BF7484BC6190}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{81CB5AF8-E9FE-49A7-89B1-4C2A164DAA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81CB5AF8-E9FE-49A7-89B1-4C2A164DAA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81CB5AF8-E9FE-49A7-89B1-4C2A164DAA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090A7186-5B79-413B-B342-BF7484BC6190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090A7186-5B79-413B-B342-BF7484BC6190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090A7186-5B79-413B-B342-BF7484BC6190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090A7186-5B79-413B-B342-BF7484BC6190}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
