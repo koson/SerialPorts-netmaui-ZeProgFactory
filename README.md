@@ -1,10 +1,12 @@
 # SerialPorts
 
 ## test with /dev/tty.usbserial-FTF91Q27
-|               | List | Test |  |                           |      
-| .CMD ARM      |  KO  |  KO  |  | missing driver            |
-| .CMD x64      |  OK  |  OK  |  |                           |
-| .Maui PC ARM  |  OK  |  KO  |  |                           |
-| .Maui PC x64  |  OK  |  OK  |  |                           |
-| .Maui Mac ARM |  OK  |  KO  |  | libSystem.IO.Ports.Native |
-| .Maui Mac x64 |      |      |  |                           |
+|               | List | Test |  |                      |      
+| .CMD PC ARM   |  KO  |      |  | "//s" missing driver |
+| .CMD PC x64   |  OK  |  OK  |  |                      |
+| .CMD Mac ARM  |      |      |  |                      |
+| .CMD Mac x64  |      |      |  |                      |
+| .Maui PC ARM  |  OK  |  KO  |  |                      |
+| .Maui PC x64  |  OK  |  OK  |  |                      |
+| .Maui Mac ARM |  OK  |  KO  |  | "lib"                |
+| .Maui Mac x64 |      |      |  |                      |
