@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
 
    void btnTest_Clicked(System.Object sender, System.EventArgs e)
    {
-      string port = "/dev/tty.usbserial-FTF91Q27";
+      string port = "COM3";
       string buffer = "Holla die Waldfee";
 
       if ( !ZPF.COMHelper.Write2SerialPort( port,  buffer))
