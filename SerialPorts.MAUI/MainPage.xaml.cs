@@ -12,11 +12,13 @@ public partial class MainPage : ContentPage
       // - - -  - - -
 
       ListPorts();
+      picker.ItemsSource = ZPF.COMHelper.SerialPortGetPortNames(DeviceInfo.Platform == DevicePlatform.MacCatalyst).ToList();
    }
 
    void btnRefresh_Clicked(System.Object sender, System.EventArgs e)
    {
       ListPorts();
+      picker.ItemsSource = ZPF.COMHelper.SerialPortGetPortNames(DeviceInfo.Platform == DevicePlatform.MacCatalyst).ToList();
    }
 
    private void ListPorts()
@@ -25,7 +27,7 @@ public partial class MainPage : ContentPage
 
       try
       {
-         var portnames = ZPF.COMHelper.SerialPortGetPortNames();
+         var portnames = ZPF.COMHelper.SerialPortGetPortNames(DeviceInfo.Platform == DevicePlatform.MacCatalyst);
 
          int ind = 0;
          foreach (var s in portnames)
@@ -39,17 +41,17 @@ public partial class MainPage : ContentPage
          st = ex.ToString();
       };
 
-      label.Text = st;
+      label.Text = st + Environment.NewLine;
    }
 
    void btnTest_Clicked(System.Object sender, System.EventArgs e)
    {
-      string port = "COM3";
+      string port = picker.SelectedItem as string;
       string buffer = "Holla die Waldfee";
 
-      if ( !ZPF.COMHelper.Write2SerialPort( port,  buffer))
+      if (!ZPF.COMHelper.Write2SerialPort(port, buffer))
       {
-         label.Text += ZPF.COMHelper.LastMessage;
+         label.Text += port + Environment.NewLine + ZPF.COMHelper.LastMessage + Environment.NewLine;
       }
    }
 

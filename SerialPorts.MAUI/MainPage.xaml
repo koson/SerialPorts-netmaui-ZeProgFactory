@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SerialPorts.MAUI.MainPage">
 
-   <Grid ColumnDefinitions="auto,*" Margin="5">
+   <Grid ColumnDefinitions="260,*" Margin="5">
 
       <VerticalStackLayout Grid.Column="0" Margin="5" BackgroundColor="WhiteSmoke" >
 
          <Button Text="Refresh ports" Margin="10" Clicked="btnRefresh_Clicked" />
-         <
+         <Picker x:Name="picker" Title="choose com port" Margin="10" TextColor="Black" BackgroundColor="WhiteSmoke" TitleColor="DarkGray"  />
          <Button Text="Test" Margin="10" Clicked="btnTest_Clicked" />
 
       </VerticalStackLayout>

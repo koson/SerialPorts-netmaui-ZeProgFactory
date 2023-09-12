@@ -8,10 +8,10 @@ public static class COMHelper
 {
    // - -  - -  - -  - -  - -  - -  - -  - -  - -  - -  - -  - -  - -  - -  - -
 
-   public static IEnumerable<string> SerialPortGetPortNames()
+   public static IEnumerable<string> SerialPortGetPortNames(bool fromFileSystem = false)
    {
       // if (DeviceInfo.Platform == DevicePlatform.MacCatalyst)
-      if (false)
+      if (fromFileSystem)
       {
          List<string> list = new List<string>();
 
