@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
 
       try
       {
-         var portnames = SerialPortGetPortNames();
+         var portnames = ZPF.COMHelper.SerialPortGetPortNames();
 
          int ind = 0;
          foreach (var s in portnames)
@@ -42,43 +42,16 @@ public partial class MainPage : ContentPage
       label.Text = st;
    }
 
-   private IEnumerable<string> SerialPortGetPortNames()
+   void btnTest_Clicked(System.Object sender, System.EventArgs e)
    {
-      if (DeviceInfo.Platform == DevicePlatform.MacCatalyst)
+      string port = "/dev/tty.usbserial-FTF91Q27";
+      string buffer = "Holla die Waldfee";
+
+      if ( !ZPF.COMHelper.Write2SerialPort( port,  buffer))
       {
-         List<string> list = new List<string>();
-
-         {
-            string[] files = Directory.GetFiles("/dev", "tty.*");
-            foreach (string text in files)
-            {
-               if (text.StartsWith("/dev/tty.", StringComparison.Ordinal))
-               {
-                  list.Add(text);
-               }
-            }
-         }
-
-         {
-            string[] files = Directory.GetFiles("/dev", "cu.*");
-            foreach (string text in files)
-            {
-               if (text.StartsWith("/dev/cu.", StringComparison.Ordinal))
-               {
-                  list.Add(text);
-               }
-            }
-         }
-
-         return list.ToArray();
+         label.Text += ZPF.COMHelper.LastMessage;
       }
-      else
-      {
-         return SerialPort.GetPortNames();
-      };
-
-
    }
-}
 
+}
 

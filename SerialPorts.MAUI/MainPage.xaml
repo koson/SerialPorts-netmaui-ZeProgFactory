@@ -8,6 +8,7 @@
       <VerticalStackLayout Grid.Column="0" Margin="5" BackgroundColor="WhiteSmoke" >
 
          <Button Text="Refresh ports" Margin="10" Clicked="btnRefresh_Clicked" />
+         <Button Text="Test" Margin="10" Clicked="btnTest_Clicked" />
 
       </VerticalStackLayout>
 
