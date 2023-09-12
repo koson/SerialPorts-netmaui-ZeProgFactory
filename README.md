@@ -1,1 +1,1 @@
-# SeralPorts
+# SerialPorts
