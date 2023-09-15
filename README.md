@@ -23,10 +23,19 @@
    
      
 ## clues to solve this issue ...
-
+###  MacOS
 [Serial Port Programming in Swift for MacOS](https://www.mac-usb-serial.com/docs/tutorials/serial-port-programming-swift-mac-os-x.html)
 
 [SwiftSerial](https://github.com/yeokm1/SwiftSerial)   
 A Swift Linux and Mac library for reading and writing to serial ports. This library has been tested to work on macOS ...   
+   
+[Accessing Serial Port on different platforms](https://github.com/dotnet/maui/discussions/4526)  
+Since .NET 6 was supposed to bring the cross-platform API under one hood, I would like to ask whether SerialPort was also considered for that. When moving from a Windows only app on WPF to .NET Maui I was kind of expecting to just use System.IO.Ports.SerialPort for all my serial port needs, however it seems to not be the case.  
 
+### Android
+[UsbSerialForAndroid](https://github.com/Jignesh-Darji/xamarin-usb-serial-for-android-2019)  
+
+
+### Linux  
+[Using embedded GPIO UART serial port with .NET Core 2.0 on a Raspberry PI 3 running Linux](https://github.com/Ellerbach/serialapp)
 
