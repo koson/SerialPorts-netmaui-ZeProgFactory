@@ -31,6 +31,10 @@ A Swift Linux and Mac library for reading and writing to serial ports. This libr
    
 [Accessing Serial Port on different platforms](https://github.com/dotnet/maui/discussions/4526)  
 Since .NET 6 was supposed to bring the cross-platform API under one hood, I would like to ask whether SerialPort was also considered for that. When moving from a Windows only app on WPF to .NET Maui I was kind of expecting to just use System.IO.Ports.SerialPort for all my serial port needs, however it seems to not be the case.  
+   
+[ORSSerialPort](https://github.com/armadsen/ORSSerialPort)   
+ORSSerialPort is an easy-to-use Objective-C serial port library for macOS ...   
+   
 
 ### Android
 [UsbSerialForAndroid](https://github.com/Jignesh-Darji/xamarin-usb-serial-for-android-2019)  
