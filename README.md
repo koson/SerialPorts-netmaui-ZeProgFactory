@@ -24,6 +24,8 @@
      
 ## clues to solve this issue ...
 ###  MacOS
+[Newer macOS serial entitlement](https://github.com/yeokm1/SwiftSerial/issues/18)   
+   
 [Serial Port Programming in Swift for MacOS](https://www.mac-usb-serial.com/docs/tutorials/serial-port-programming-swift-mac-os-x.html)
 
 [SwiftSerial](https://github.com/yeokm1/SwiftSerial)   
