@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SerialPorts.CMD": {
+      "commandName": "Project",
+      "commandLineArgs": "0"
+    }
+  }
+}
