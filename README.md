@@ -24,6 +24,8 @@
      
 ## clues to solve this issue ...
 ###  MacOS
+[System.IO.Ports.SerialPort not working on Linux arm64 #74332](https://github.com/dotnet/runtime/issues/74332)  
+   
 [Newer macOS serial entitlement](https://github.com/yeokm1/SwiftSerial/issues/18)   
    
 [Serial Port Programming in Swift for MacOS](https://www.mac-usb-serial.com/docs/tutorials/serial-port-programming-swift-mac-os-x.html)
