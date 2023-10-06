@@ -11,8 +11,7 @@ public partial class MainPage : ContentPage
 
       // - - -  - - -
 
-      ListPorts();
-      picker.ItemsSource = ZPF.COMHelper.SerialPortGetPortNames(DeviceInfo.Platform == DevicePlatform.MacCatalyst).ToList();
+      btnRefresh_Clicked(null, null);
    }
 
    void btnRefresh_Clicked(System.Object sender, System.EventArgs e)
