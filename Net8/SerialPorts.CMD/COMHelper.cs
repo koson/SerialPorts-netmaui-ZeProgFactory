@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO.Ports;
 using System.Text;
 
@@ -51,8 +52,9 @@ public static class COMHelper
    public static string LastMessage { get; private set; }
 
    private static SerialPort _SerialPort;
+   public static int _baudRate { get; set; }
 
-   public static bool Write2SerialPort(string port, string buffer)
+   public static bool Write2SerialPort(string port,  string buffer)
    {
       LastMessage = "";
 
@@ -73,7 +75,7 @@ public static class COMHelper
 
    public static bool InitSerialPort(string port)
    {
-      _SerialPort = new SerialPort(port, 9600, Parity.None, 8, StopBits.One)
+      _SerialPort = new SerialPort(port, _baudRate, Parity.None, 8, StopBits.One)
       {
          Handshake = Handshake.None,
          ReadTimeout = 0,
@@ -90,7 +92,7 @@ public static class COMHelper
       catch (Exception ex)
       {
          LastMessage = ex.Message;
-         Console.WriteLine(ex.Message);
+         Debug.WriteLine(ex.Message);
          return false;
       };
 
@@ -107,7 +109,7 @@ public static class COMHelper
       catch (Exception ex)
       {
          LastMessage = ex.Message;
-         Console.WriteLine(ex.Message);
+         Debug.WriteLine(ex.Message);
          return false;
       };
 
@@ -116,12 +118,12 @@ public static class COMHelper
 
    private static void _SerialPort_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
    {
-      Console.WriteLine($"SerialPort_ErrorReceived: [{e.ToString()}]");
+      Debug.WriteLine($"SerialPort_ErrorReceived: [{e.ToString()}]");
    }
 
    private static void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
    {
-      Console.WriteLine($"SerialPort_DataReceived: [{e.ToString()}]");
+      Debug.WriteLine($"SerialPort_DataReceived: {(sender as SerialPort).ReadExisting()})]");
    }
 
    public static bool SendData(string Buffer)
@@ -140,7 +142,7 @@ public static class COMHelper
       catch (Exception ex)
       {
          LastMessage = ex.Message;
-         Console.WriteLine(ex.Message);
+         Debug.WriteLine(ex.Message);
          return false;
       };
 

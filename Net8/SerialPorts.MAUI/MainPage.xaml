@@ -3,19 +3,97 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SerialPorts.MAUI.MainPage">
 
-   <Grid ColumnDefinitions="260,*" Margin="5">
+   <Grid ColumnDefinitions="200,*" Margin="5">
 
       <VerticalStackLayout Grid.Column="0" Margin="5" BackgroundColor="WhiteSmoke" >
 
          <Button Text="Refresh ports" Margin="10" Clicked="btnRefresh_Clicked" />
          <Picker x:Name="picker" Title="choose com port" Margin="10" TextColor="Black" BackgroundColor="WhiteSmoke" TitleColor="DarkGray"  />
+         <Picker x:Name="pickerSpeed" Title="choose com Speed" Margin="10" TextColor="Black" BackgroundColor="WhiteSmoke" TitleColor="DarkGray"  />
+
          <Button Text="Test" Margin="10" Clicked="btnTest_Clicked" />
 
       </VerticalStackLayout>
-
       <Editor Grid.Column="1" x:Name="label"
              Margin="5" BackgroundColor="WhiteSmoke"
               />
+      <VerticalStackLayout Grid.Column="1" Margin="5" BackgroundColor="WhiteSmoke" >
+         <Grid RowSpacing="6" ColumnSpacing="6"
+               RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*"
+               ColumnDefinitions="*,*,*,*">
+
+            <Button Text="1"  Grid.Row="0"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="2"  Grid.Row="1"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="3"  Grid.Row="2"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="4"  Grid.Row="3"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="5"  Grid.Row="4"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="6"  Grid.Row="5"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="7"  Grid.Row="6"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="8"  Grid.Row="7"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="9"  Grid.Row="8"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="10" Grid.Row="9"  Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="11" Grid.Row="10" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="12" Grid.Row="11" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="13" Grid.Row="12" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="14" Grid.Row="13" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="15" Grid.Row="14" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="16" Grid.Row="15" Grid.Column="0" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            
+            <Button Text="17" Grid.Row="0"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="18" Grid.Row="1"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="19" Grid.Row="2"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="20" Grid.Row="3"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="21" Grid.Row="4"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="22" Grid.Row="5"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="23" Grid.Row="6"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="24" Grid.Row="7"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="25" Grid.Row="8"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="26" Grid.Row="9"  Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="27" Grid.Row="10" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="28" Grid.Row="11" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="29" Grid.Row="12" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="30" Grid.Row="13" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="31" Grid.Row="14" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="32" Grid.Row="15" Grid.Column="1" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+
+            <Button Text="33" Grid.Row="0"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="34" Grid.Row="1"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="35" Grid.Row="2"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="36" Grid.Row="3"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="37" Grid.Row="4"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="38" Grid.Row="5"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="39" Grid.Row="6"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="40" Grid.Row="7"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="41" Grid.Row="8"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="42" Grid.Row="9"  Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="43" Grid.Row="10" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="44" Grid.Row="11" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="45" Grid.Row="12" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="46" Grid.Row="13" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="47" Grid.Row="14" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="48" Grid.Row="15" Grid.Column="2" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+
+            <Button Text="49" Grid.Row="0"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="50" Grid.Row="1"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="51" Grid.Row="2"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="52" Grid.Row="3"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="53" Grid.Row="4"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="54" Grid.Row="5"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="55" Grid.Row="6"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="56" Grid.Row="7"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="57" Grid.Row="8"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="58" Grid.Row="9"  Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="59" Grid.Row="10" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="60" Grid.Row="11" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="61" Grid.Row="12" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="62" Grid.Row="13" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="63" Grid.Row="14" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+            <Button Text="64" Grid.Row="15" Grid.Column="3" BackgroundColor="DarkGreen" Clicked="OnButtonClicked"/>
+
+
+         </Grid>
+      </VerticalStackLayout>
+
 
    </Grid>
 
